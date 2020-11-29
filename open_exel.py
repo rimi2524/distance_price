@@ -2,6 +2,7 @@ import openpyxl
 
 filename = "town_data.xlsx"
 TownData = openpyxl.load_workbook(filename)
+
 sheet = TownData.worksheets[0]
 
 data = []
@@ -14,7 +15,7 @@ for row in sheet.rows:
         row[8].value,
         row[9].value,
         row[10].value,
-        row[11].value
+        row[11].value,
     ])
 
-print (data)
+    print(data)
